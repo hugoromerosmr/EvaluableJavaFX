@@ -49,6 +49,8 @@ public class HelloController implements Initializable {
     private Button clear;
     @FXML
     private Spinner spinner;
+    @FXML
+    private TableColumn software;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -58,6 +60,9 @@ public class HelloController implements Initializable {
         this.tablecolum1.setCellValueFactory(new PropertyValueFactory<User, String>("Email"));
         this.tablecolum2.setCellValueFactory(new PropertyValueFactory<User, String>("platform"));
         this.tablecolum3.setCellValueFactory(new PropertyValueFactory<User, String>("admin"));
+        this.software.setCellValueFactory(new PropertyValueFactory<User, String>("software"));
+        spinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 5, 1));
+
 
 
         table.getSelectionModel().selectedItemProperty().addListener(
@@ -80,7 +85,8 @@ public class HelloController implements Initializable {
         String correo = fieldcorreo.getText();
         String platform = fieldplatform.getValue();
         Boolean admin = checkadmin.isSelected();
-        User user = new User(correo, platform, admin);
+        Long sofware= Long.valueOf(spinner.getValue().toString());
+        User user = new User(correo, platform, admin,sofware);
         if (fieldcorreo.getText().isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);

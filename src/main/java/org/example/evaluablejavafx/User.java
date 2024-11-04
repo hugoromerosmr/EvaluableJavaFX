@@ -11,5 +11,6 @@ public class User implements Serializable {
     private String email;
     private String platform;
     private Boolean admin;
+    private Long software;
 
 }

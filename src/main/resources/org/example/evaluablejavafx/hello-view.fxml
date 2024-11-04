@@ -18,13 +18,14 @@
    <center>
       <HBox fx:id="hbox" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox fx:id="vbox1" prefHeight="526.0" prefWidth="487.0">
+            <VBox fx:id="vbox1" prefHeight="582.0" prefWidth="630.0">
                <children>
                   <TableView fx:id="table" prefHeight="394.0" prefWidth="404.0">
                     <columns>
                       <TableColumn fx:id="tablecolum1" prefWidth="145.59997177124023" text="Correo" />
                       <TableColumn fx:id="tablecolum2" prefWidth="121.60005187988281" text="Plataforma" />
                         <TableColumn fx:id="tablecolum3" prefWidth="147.20001220703125" text="Administrador" />
+                        <TableColumn fx:id="software" prefWidth="75.0" text="Software" />
                     </columns>
                   </TableView>
                </children>
